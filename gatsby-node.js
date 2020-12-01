@@ -4,4 +4,33 @@
  * See: https://www.gatsbyjs.com/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
+const path = require("path")
+
+exports.createPages = ({graphql,actions}) => {
+    const {createPage} = actions
+    const blogPost = path.resolve(`src/template/blog-post.js`)
+
+    return graphql(`
+        {
+            allContentfulBlog( sort: {field: publishedDate, order:DESC}) {
+                edges {
+                    node{
+                        slug 
+                    }
+                }
+            }
+        }
+    `).then((result)=> {
+        result.data.allContentfulBlog.edges.forEach((node)=> {
+            createPage({
+                path:`/blog/${item.node.slug}`,
+                component: blogPost,
+                context: {
+                    slug : item.node.slug
+                }
+            })
+
+        })
+    })
+
+    }
