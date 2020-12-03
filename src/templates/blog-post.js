@@ -1,4 +1,4 @@
-import React from "reactjs"
+import React from "react"
 import { graphql, Link} from "gatsby"
 import Layout from "../components/layout"
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer"
@@ -38,7 +38,7 @@ const BlogPost = (props) => {
      <Layout>
         <div> 
              <h2>{props.data.contentfulBlog.title}</h2>
-             <p style={{fontWeight: 300, fontSize: "0.9rem"}}> Published {props.data.contentfulBlog.publishedDate}</p>
+             <p style={{fontWeight: 200, fontSize: "0.8rem"}}> Published {props.data.contentfulBlog.publishedDate}</p>
              <p style={{fontWeight: 300, fontSize: "0.9rem"}}> Written by {props.data.contentfulBlog.author}</p>
              {
                  documentToReactComponents(props.data.contentfulBlog.body.json, options)
@@ -49,3 +49,5 @@ const BlogPost = (props) => {
      </Layout>   
     )
 }
+
+export default BlogPost

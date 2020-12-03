@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 const Blog = () => {
     const data = useStaticQuery(graphql`
     {
-     
+  
       allContentfulBlog(sort: {fields: publishedDate, order: DESC}) {
         edges {
           node {
