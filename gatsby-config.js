@@ -1,3 +1,6 @@
+const { withAuthenticationRequired } = require("@auth0/auth0-react")
+
+require("dotenv").config()
 module.exports = {
   siteMetadata: {
     title: `Blog Spot`,
@@ -9,7 +12,7 @@ module.exports = {
       resolve: 'gatsby-source-contentful',
       options: {
        spaceId: "vi41txx295zu",
-       accessToken: "O44xapAIg5zFDJIEu7_Ki6GNwwqICcfmFYAPhAebmc0"
+       accessToken: "O44xapAIg5zFDJIEu7_Ki6GNwwqICcfmFYAPhAebmc0",
       }
     },
     `gatsby-plugin-react-helmet`,
