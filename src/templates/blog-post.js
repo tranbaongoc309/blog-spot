@@ -42,9 +42,8 @@ const BlogPost = (props) => {
              <p style={{fontWeight: 200, fontSize: "0.8rem"}}> Published {props.data.contentfulBlog.publishedDate}</p>
              <p style={{fontWeight: 300, fontSize: "0.9rem"}}> Written by {props.data.contentfulBlog.author}</p>
              {
-                console.log(props.data) 
 
-              //   documentToReactComponents(props.data.contentfulBlog.body.json, options)
+               documentToReactComponents(props.data.contentfulBlog.body.json, options)
              }
              <Link to="/blog"> Back to Blog</Link>
 
