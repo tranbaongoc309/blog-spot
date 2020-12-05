@@ -3,9 +3,9 @@ const { withAuthenticationRequired } = require("@auth0/auth0-react")
 require("dotenv").config()
 module.exports = {
   siteMetadata: {
-    title: `Blog Spot`,
-    description: `An interestin Blog for Art-lover`,
-    author: `@ann`,
+    title: `Bao's Corner`,
+    description: `All about Me!`,
+    author: `@Bao`,
   },
   plugins: [
     {
@@ -42,3 +42,4 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
+
