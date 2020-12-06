@@ -3,16 +3,15 @@
  *
  * See: https://www.gatsbyjs.com/docs/node-apis/
  */
-
 const path = require("path")
 
 exports.createPages = ({graphql,actions}) => {
     const {createPage} = actions
-    const blogPost = path.resolve(`src/template/blog-post.js`)
+    const blogPost = path.resolve(`./src/templates/blog-post.js`)
 
     return graphql(`
         {
-            allContentfulBlog( sort: {field: publishedDate, order:DESC}) {
+            allContentfulBlog( sort: {fields: publishedDate, order:DESC}) {
                 edges {
                     node{
                         slug 
@@ -21,7 +20,9 @@ exports.createPages = ({graphql,actions}) => {
             }
         }
     `).then((result)=> {
-        result.data.allContentfulBlog.edges.forEach((node)=> {
+        result.data.allContentfulBlog.edges.forEach((item)=> {
+            
+
             createPage({
                 path:`/blog/${item.node.slug}`,
                 component: blogPost,
@@ -31,6 +32,7 @@ exports.createPages = ({graphql,actions}) => {
             })
 
         })
+        
     })
 
     }
