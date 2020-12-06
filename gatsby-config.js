@@ -3,16 +3,16 @@ const { withAuthenticationRequired } = require("@auth0/auth0-react")
 require("dotenv").config()
 module.exports = {
   siteMetadata: {
-    title: `Blog Spot`,
-    description: `An interestin Blog for Art-lover`,
-    author: `@ann`,
+    title: `Bao's Corner`,
+    description: `All about Me!`,
+    author: `@Bao`,
   },
   plugins: [
     {
       resolve: 'gatsby-source-contentful',
       options: {
        spaceId: "vi41txx295zu",
-       accessToken: "O44xapAIg5zFDJIEu7_Ki6GNwwqICcfmFYAPhAebmc0"
+       accessToken: "O44xapAIg5zFDJIEu7_Ki6GNwwqICcfmFYAPhAebmc0",
       }
     },
     `gatsby-plugin-react-helmet`,
@@ -42,3 +42,4 @@ module.exports = {
     // `gatsby-plugin-offline`,
   ],
 }
+

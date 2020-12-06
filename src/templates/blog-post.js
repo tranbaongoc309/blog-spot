@@ -3,6 +3,7 @@ import { graphql, Link} from "gatsby"
 import Layout from "../components/layout"
 import {documentToReactComponents} from "@contentful/rich-text-react-renderer"
 import {INLINES, BLOCKS} from "@contentful/rich-text-types"
+import {withAuthenticationRequired} from "@auth0/auth0-react"
 
 export const data = graphql`
 
@@ -38,7 +39,7 @@ const BlogPost = (props) => {
      <Layout>
         <div> 
              <h2>{props.data.contentfulBlog.title}</h2>
-             <p style={{fontWeight: 300, fontSize: "0.9rem"}}> Published {props.data.contentfulBlog.publishedDate}</p>
+             <p style={{fontWeight: 200, fontSize: "0.8rem"}}> Published {props.data.contentfulBlog.publishedDate}</p>
              <p style={{fontWeight: 300, fontSize: "0.9rem"}}> Written by {props.data.contentfulBlog.author}</p>
              {
                 console.log(props.data) 
