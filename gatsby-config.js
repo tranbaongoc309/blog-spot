@@ -6,7 +6,10 @@ module.exports = {
     title: `Bao's Corner`,
     description: `All about Me!`,
     author: `@Bao`,
-    social: {url:``}
+    social: {
+      url: ``,
+      name: ``
+    }
   },
   plugins: [
     {
