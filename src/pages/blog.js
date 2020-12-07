@@ -37,10 +37,10 @@ const Blog = () => {
               return (
                 <div key={i}>
                   <h2>{post.node.title}</h2>
-                  <p style={{ fontWeight: 200, fontSize: "0.8rem" }}>
+                  <p style={{ fontWeight: 300, fontSize: "0.9rem" }}>
                     Published {post.node.publishedDate}
                   </p>
-                  <p style={{ fontWeight: 300, fontSize: "0.9rem" }}>
+                  <p style={{ fontWeight: 200, fontSize: "0.8rem" }}>
                     Written by {post.node.author}
                   </p>
                   <Link to={`/blog/${post.node.slug}`}> Read more...</Link>

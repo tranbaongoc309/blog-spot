@@ -39,10 +39,9 @@ const BlogPost = (props) => {
      <Layout>
         <div> 
              <h2>{props.data.contentfulBlog.title}</h2>
-             <p style={{fontWeight: 200, fontSize: "0.8rem"}}> Published {props.data.contentfulBlog.publishedDate}</p>
-             <p style={{fontWeight: 300, fontSize: "0.9rem"}}> Written by {props.data.contentfulBlog.author}</p>
+             <p style={{fontWeight: 300, fontSize: "0.9rem"}}> Published {props.data.contentfulBlog.publishedDate}</p>
+             <p style={{fontWeight: 200, fontSize: "0.8rem"}}> Written by {props.data.contentfulBlog.author}</p>
              {
-                console.log(props.data) 
 
               //   documentToReactComponents(props.data.contentfulBlog.body.json, options)
              }
