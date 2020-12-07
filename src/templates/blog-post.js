@@ -24,7 +24,7 @@ const BlogPost = (props) => {
         renderNode: {
             [INLINES.HYPERLINK]: (node) => {
               if(node.data.uri.includes("youtube")) {
-                  var url = node.data.uri.replace("watch?v=","embed/")
+                  var url = node.data.uri.replace("embed/")
                   return <iframe title={node.title} width="560" height="315" src={url} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               }  
             },
@@ -43,7 +43,7 @@ const BlogPost = (props) => {
              <p style={{fontWeight: 200, fontSize: "0.8rem"}}> Written by {props.data.contentfulBlog.author}</p>
              {
 
-              //   documentToReactComponents(props.data.contentfulBlog.body.json, options)
+                documentToReactComponents(props.data.contentfulBlog.body.json, options)
              }
              <Link to="/blog"> Back to Blog</Link>
 

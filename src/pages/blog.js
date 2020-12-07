@@ -33,7 +33,7 @@ const Blog = () => {
           <SEO title="Blog" />
           <h1> Blog</h1>
           <div>
-            {data.allContentfulBlog.edges.map((post, i) => {
+            {data.allContentfulBlog.edges.map((post,i) => {
               return (
                 <div key={i}>
                   <h2>{post.node.title}</h2>
